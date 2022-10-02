@@ -36,7 +36,7 @@
                                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal-{{ $item->id }}">
                                         Edit
                                     </button>
-                                    <form method="POST" action="{{route('categories.update', [$item->id])}}" class="d-inline" onsubmit="return confirm('Delete this data permanently?')">
+                                    <form method="POST" action="{{route('categories.destroy', [$item->id])}}" class="d-inline" onsubmit="return confirm('Delete this data permanently?')">
                                     @csrf
                                         <input type="hidden" name="_method" value="DELETE">
                                         <input type="submit" value="Delete" class="btn btn-danger btn-sm">
